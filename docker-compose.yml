@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  puppeteer: 
+    build: "./"
+    restart: always
+    expose:
+      - ${PORT}
+    ports:
+      - "${PORT}:${PORT}"
+    container_name: puppeteer-${NODE_ENV}
+    
